@@ -185,7 +185,7 @@ def majorityVoting():
     for temp in range(5):
         majority_voting[temp][1] = 0 
 
-    for knn in range(5):
+    for knn in range(5): # 5 represent number of Neighbors. This can be change according to the classification.
         value = distance[knn][1]
         for imp in majority_voting:
             if imp[0] == value:
@@ -251,7 +251,7 @@ def classifyTheData():
 
 def main():
     pickDataClass([1,2,3,4,6])
-    splitData2TestTrain(39,'1:10')
+    splitData2TestTrain(39,'1:10')  # 1:10 means 10 test instance and rest will be training data.
     for i in X_test:
         calculateEuclideanDistance(i)
         distance.sort(key=sortFirst)
